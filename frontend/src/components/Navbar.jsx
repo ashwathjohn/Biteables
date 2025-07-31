@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { assets } from '../assets/assets';
+import {Link} from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = ({ setShowLogin }) => {
@@ -7,14 +8,18 @@ const Navbar = ({ setShowLogin }) => {
 
   return (
     <div className='navbar'>
-      <span className="text-4xl cursor-pointer font-bold bg-gradient-to-r from-red-700 to-red-400 inline-block text-transparent bg-clip-text">
+     <Link to='/'><span className="text-4xl cursor-pointer font-bold bg-gradient-to-r from-red-700 to-red-400 inline-block text-transparent bg-clip-text"> 
         Biteables.
       </span>
+      </Link>
+    
 
       <ul className="navbar-menu">
-        <li onClick={() => setMenu("home")} className={menu === "home" ? "active:pb-2 border-b-2 border-gray-600" : ""}>
-          <a href="#">Home</a>
-        </li>
+      
+       <Link to='/' onClick={() => setMenu("home")} className={menu === "home" ? "active:pb-2 border-b-2 border-gray-600" : ""}>
+         <a> Home</a>
+          </Link>
+       
         <li onClick={() => setMenu("menu")} className={menu === "menu" ? "active:pb-2 border-b-2 border-gray-600" : ""}>
           <a href="#explore-menu">Menu</a>
         </li>
@@ -29,7 +34,7 @@ const Navbar = ({ setShowLogin }) => {
       <div className='navbar-right'>
         <img className='cursor-pointer' src={assets.search_icon} alt='' />
         <div className='navbar-search-icon'>
-          <img className='cursor-pointer' src={assets.basket_icon} alt='' />
+          <Link  to='/cart'><img className='cursor-pointer' src={assets.basket_icon} alt='' /></Link>
           <div className='dot'></div>
         </div>
         <button
