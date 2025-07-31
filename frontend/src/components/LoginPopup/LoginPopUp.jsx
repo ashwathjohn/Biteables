@@ -3,7 +3,7 @@ import './LoginPopUp.css';
 import { assets } from '../../assets/assets';
 
 const LoginPopUp = ({ setShowLogin }) => {
-  const [currState, setCurrState] = useState("Login");
+  const [currState, setCurrState] = useState("Sign Up");
 
   const toggleState = () => {
     setCurrState(prev => (prev === "Login" ? "Sign Up" : "Login"));
@@ -44,12 +44,12 @@ const LoginPopUp = ({ setShowLogin }) => {
           {currState === "Login" ? (
             <p>
               Create a new account?{" "}
-              <span onClick={toggleState}>Click here</span>
+              <span onClick={toggleState}>Click Here</span>
             </p>
           ) : (
             <p>
               Already have an account?{" "}
-              <span onClick={toggleState}>Login here</span>
+              <span onClick={toggleState}>Login Here</span>
             </p>
           )}
         </div>
