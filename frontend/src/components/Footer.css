@@ -75,3 +75,34 @@
     .footer-content-right li{
         margin-left: 35px;
     }
+
+
+    @media(max-width:750px) {
+      .footer-content{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+      }
+
+      .footer-copyright{
+        text-align: center;
+      }
+
+      .footer-content-left span{
+    margin-right: 130px;
+
+}
+
+  .footer-social-icons{
+    margin-right: 230px;
+  }
+
+  .footer-content-center{
+    margin-right: 130px;
+  }
+
+  .footer-content-right{
+    margin-right: 100px;
+  }
+      
+    }

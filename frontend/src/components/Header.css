@@ -1,4 +1,4 @@
-.header{
+.header {
     height: 34vw;
     margin: 30px auto;
     background: url('/header_img.png') no-repeat;
@@ -6,7 +6,7 @@
     position: relative;
 }
 
-.header-contents{
+.header-contents {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -19,30 +19,60 @@
 
 }
 
-.header-contents h2{
+.header-contents h2 {
     font-weight: 500;
     color: white;
-    font-size: max(4.4vw , 22px);
+    font-size: max(4.4vw, 22px);
 }
 
-.header-contents p{
+.header-contents p {
     color: white;
     font-size: 1vw;
 }
 
-.header-contents button{
+.header-contents button {
     border: none;
     font-weight: 500;
     padding: 1vw 2.3vw;
     background-color: white;
-    font-size: max(1vw , 13px);
+    font-size: max(1vw, 13px);
     border-radius: 50px;
     color: #E6521F;
     cursor: pointer;
 }
 
-.header-contents button:hover{
-  background-color: #f79878;
-  color: white;
-  transition: 0.5s ease-out;
+.header-contents button:hover {
+    background-color: #f79878;
+    color: white;
+    transition: 0.5s ease-out;
+}
+
+@media(max-width:1050px) {
+
+
+    .header-contents {
+        max-width: 45%;
+    }
+}
+
+@media(max-width:750px) {
+
+
+    .header-contents {
+        max-width: 65%;
+    }
+
+    .header-contents p {
+        display: none;
+    }
+
+    .header-contents button {
+        padding: 2vw, 4vw;
+    }
+
+    .header-contents button:hover {
+        background-color: #f79878;
+        color: white;
+        transition: 0.5s ease-out;
+    }
 }
