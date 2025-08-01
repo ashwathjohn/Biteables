@@ -45,8 +45,16 @@
     gap: 20px;
 }
 
+.cart-total-details .t{
+    font-size: 25px;
+    font-weight: 500;
+    color: black;
+}
+
 .cart-total h2{
-    font-size:25px;
+        font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 40px;
 }
 
 .cart-total-details{

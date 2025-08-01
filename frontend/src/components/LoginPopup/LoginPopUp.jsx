@@ -44,12 +44,12 @@ const LoginPopUp = ({ setShowLogin }) => {
           {currState === "Login" ? (
             <p>
               Create a new account?{" "}
-              <span onClick={toggleState}>Click Here</span>
+              <span onClick={toggleState}>Click here.</span>
             </p>
           ) : (
             <p>
               Already have an account?{" "}
-              <span onClick={toggleState}>Login Here</span>
+              <span onClick={toggleState}>Login here.</span>
             </p>
           )}
         </div>
