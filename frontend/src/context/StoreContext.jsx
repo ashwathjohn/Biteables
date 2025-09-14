@@ -4,10 +4,10 @@ import axios from "axios";
 
 export const StoreContext = createContext(null)
 
+
 const StoreContextProvider = (props) => {
 
     const [cartItems , setCartItems] = useState({});
-
     const url = "http://localhost:3000"
     const [token ,setToken] = useState("");
     const [food_list ,setFoodList] = useState([])
@@ -57,6 +57,9 @@ const StoreContextProvider = (props) => {
         setCartItems(response.data.cartData);
     }
 
+  
+
+
 
     useEffect(()=>{
 
@@ -83,7 +86,8 @@ const StoreContextProvider = (props) => {
         getTotalCartAmount,
         url,
         token,
-        setToken
+        setToken,
+    
 
 
     }
