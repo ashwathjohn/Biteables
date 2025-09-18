@@ -3,6 +3,7 @@ import './LoginPopUp.css';
 import { assets } from '../../assets/assets';
 import { StoreContext } from '../../context/StoreContext';
 import axios from "axios"
+import { toast } from 'react-toastify'
 
 const LoginPopUp = ({ setShowLogin }) => {
 
@@ -36,6 +37,9 @@ const LoginPopUp = ({ setShowLogin }) => {
     else{
       newUrl +=  "/api/user/register" 
     }
+
+    /*old code
+
     const response = await axios.post(newUrl,data);
     if(response.data.success)
     {
@@ -45,6 +49,32 @@ const LoginPopUp = ({ setShowLogin }) => {
     }
     else{
       alert(response.data.message)
+    }
+      
+    */
+
+    
+    //new code
+
+    try {
+      const response = await axios.post(newUrl, data);
+
+      if (response.data.success) {
+        setToken(response.data.token);
+        localStorage.setItem("token", response.data.token);
+        setShowLogin(false);
+
+        
+        if (currState === "Login") {
+          toast.success("Logged in Successfully! 🎊");
+        } else {
+          toast.success("Account Created Successfully! 🎊");
+        }
+      } else {
+        toast.error(response.data.message || "Something went wrong ❌");
+      }
+    } catch (error) {
+      toast.error(error.response?.data?.message || "Server error ❌");
     }
 
   }
