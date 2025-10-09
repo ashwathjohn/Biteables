@@ -57,7 +57,21 @@ const StoreContextProvider = (props) => {
         setCartItems(response.data.cartData);
     }
 
+      const logout = () => {
+    setToken("");
+    localStorage.removeItem("token");
+    setCartItems({});
+    console.log("User logged out, session cleared.");
+  };
   
+  const handleLogin = async (newToken) => {
+ 
+  localStorage.setItem("token", newToken);
+  setToken(newToken);
+
+
+  await loadCartData(newToken);
+};
 
 
 
@@ -87,6 +101,8 @@ const StoreContextProvider = (props) => {
         url,
         token,
         setToken,
+        logout,
+        handleLogin,
     
 
 
