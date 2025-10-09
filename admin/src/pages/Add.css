@@ -5,7 +5,13 @@
     color: #4a4444;
     font-size: 18px;
 }
-
+ .add h2{
+      font-size: 20px;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-bottom: 20px;
+     color: #746f6f;
+ }
 .add form{
     gap: 20px;
 
