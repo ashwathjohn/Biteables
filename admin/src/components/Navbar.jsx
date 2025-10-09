@@ -13,7 +13,7 @@ const Navbar = () => {
         </Link>
 
         <img className='profile' src={assets.profile_image} />
-        
+      
       
     </div>
   )

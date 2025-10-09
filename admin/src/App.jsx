@@ -8,21 +8,36 @@ import Order from './pages/Order'
  import { ToastContainer } from 'react-toastify';
  import 'react-toastify/dist/ReactToastify.css';
 
+
 const App = () => {
+
+  const url="http://localhost:3000"
   return (
     <div>
-      <ToastContainer />
+      <ToastContainer 
+      position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"/>
       <Navbar />
       <hr/>
+      
       <div className='app-content'>
         <Sidebar />
         <Routes>
-          <Route path='/add' element={<Add/>} />
-           <Route path='/list' element={<List/>} />
-            <Route path='/orders' element={<Order/>} />
+          <Route path='/add' element={<Add url={url}/>} />
+           <Route path='/list' element={<List url={url} />} />
+            <Route path='/orders' element={<Order url={url} />} />
         </Routes>
+       
       </div>
-      
+    
     </div>
   )
 }
