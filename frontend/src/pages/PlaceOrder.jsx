@@ -103,8 +103,17 @@ const navigate = useNavigate();
           <input required  name='zipcode' onChange={onChangeHandler} value={data.zipcode} type="number" placeholder='Zip Code' />
           <input required  name='country' onChange={onChangeHandler} value={data.country} type="text" placeholder='Country' />
         </div>
-        <input required  name='phone' onChange={onChangeHandler} value={data.phone} type="number" placeholder='Phone' />
-
+        {/* <input required  name='phone'  pattern="[6-9][0-9]{9}" maxLength="10" onChange={onChangeHandler} value={data.phone} type="text" placeholder='Phone' /> */}
+         <input
+  required
+  name="phone"
+  type="text"
+  placeholder="Phone"
+  pattern="^[6-9][0-9]{9}$"
+  maxLength="10"
+  onChange={onChangeHandler}
+  value={data.phone}
+/>
       </div>
       <div className="place-order-right">
            <div className="cart-total">

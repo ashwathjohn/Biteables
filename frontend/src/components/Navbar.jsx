@@ -36,17 +36,17 @@ const Navbar = ({ setShowLogin }) => {
 
       <ul className="navbar-menu">
       
-       <Link to='/' onClick={() => setMenu("home")} className={menu === "home" ? "active:pb-2 border-b-2 border-gray-600" : ""}>
+       <Link to='/' onClick={() => setMenu("home")}>
          <a> Home</a>
           </Link>
        
-        <li onClick={() => setMenu("menu")} className={menu === "menu" ? "active:pb-2 border-b-2 border-gray-600" : ""}>
+        <li onClick={() => setMenu("menu")} >
           <a href="#explore-menu">Menu</a>
         </li>
-        <li onClick={() => setMenu("mobile-app")} className={menu === "mobile-app" ? "active:pb-2 border-b-2 border-gray-600" : ""}>
+        <li onClick={() => setMenu("mobile-app")}>
           <a href="#app-download">Mobile-App</a>
         </li>
-        <li onClick={() => setMenu("contact")} className={menu === "contact" ? "active:pb-2 border-b-2 border-gray-600" : ""}>
+        <li onClick={() => setMenu("contact")}>
           <a href="#footer">Contact</a>
         </li>
       </ul>
