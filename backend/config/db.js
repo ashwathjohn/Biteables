@@ -3,4 +3,4 @@ import mongoose from "mongoose";
 
 export  const connectDB = async () => {
     await mongoose.connect(`${process.env.MONGODB_URI}/biteables`).then(()=>console.log("DB Connected"));
-}
+} 

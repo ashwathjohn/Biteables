@@ -11,7 +11,9 @@ import Order from './pages/Order'
 
 const App = () => {
 
-  const url="http://localhost:3000"
+  const url= import.meta.env.VITE_BASE_URL
+
+ // const url="http://localhost:3000"
   return (
     <div>
       <ToastContainer 
