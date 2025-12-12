@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 const List = () => {
   //const url= import.meta.env.VITE_BASE_URL
 
-  const url = "http://localhost:3000"
+  const url = "https://biteables-backend.onrender.com"
 
   const [list,setList]=useState([]);
 

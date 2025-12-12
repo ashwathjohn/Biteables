@@ -13,7 +13,7 @@ const App = () => {
 
   //const url= import.meta.env.VITE_BASE_URL
 
-  const url="http://localhost:3000"
+  const url="https://biteables-backend.onrender.com"
   return (
     <div>
       <ToastContainer 
