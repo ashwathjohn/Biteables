@@ -4,9 +4,9 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const List = () => {
-  const url= import.meta.env.VITE_BASE_URL
+  //const url= import.meta.env.VITE_BASE_URL
 
- // const url = "http://localhost:3000"
+  const url = "http://localhost:3000"
 
   const [list,setList]=useState([]);
 

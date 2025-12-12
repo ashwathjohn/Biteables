@@ -14,4 +14,4 @@ export const assets ={
     parcel_icon
 }
 
-export const url= import.meta.env.VITE_BASE_URL
+export const url= "http://localhost:3000"
